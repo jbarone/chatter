@@ -12,7 +12,6 @@ var r *render.Engine
 
 func init() {
 	r = render.New(render.Options{
-		HTMLLayout:     "application.html",
 		CacheTemplates: ENV == "production",
 		FileResolverFunc: func() resolvers.FileResolver {
 			return &resolvers.RiceBox{
